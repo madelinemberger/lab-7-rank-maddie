@@ -14,3 +14,23 @@ Maddie's first message in document
 Hey Mady Burger
 ^that is rude Nelson Glen 
 
+Wow, touchy subject...
+
+```{r}
+
+library(tidyverse)
+
+kermit <- read_csv("kermit.csv")
+
+```
+
+```{r}
+
+kerm_hist <- ggplot(kermit, aes(x = Score.pre)) +
+  geom_histogram(aes(fill = Gender), bins = 4) +
+  facet_wrap(~ Gender)
+
+kerm_hist
+
+```
+
